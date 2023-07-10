@@ -32,8 +32,8 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
                 Positioned(
                     left: isPotrait ? 24 : mediaQuerySize.width / 4.5,
                     right: isPotrait ? 24 : mediaQuerySize.width / 4.5,
-                    top:isPotrait? mediaQuerySize.height/7 :  24,
-                    bottom: isPotrait? mediaQuerySize.height/7  : 24,
+                    top: isPotrait ? mediaQuerySize.height / 7 : 24,
+                    bottom: isPotrait ? mediaQuerySize.height / 7 : 24,
                     child: Container(
                       height: mediaQuerySize.height,
                       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -54,6 +54,8 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
                                 context, setState, PagePosition.register),
                             AppsPublicVariableResource.jarakheight24,
                             appsFormRegisterWidget(context, setState),
+                            AppsPublicVariableResource.jarakheight24,
+                            tailTermandPrivacyPolicies(context),
                           ],
                         ),
                       ),
@@ -92,6 +94,8 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
                                 context, setState, PagePosition.register),
                             AppsPublicVariableResource.jarakheight24,
                             appsFormRegisterWidget(context, setState),
+                            AppsPublicVariableResource.jarakheight24,
+                            tailTermandPrivacyPolicies(context),
                           ],
                         ),
                       ),

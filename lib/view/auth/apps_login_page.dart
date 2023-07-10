@@ -66,7 +66,7 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                               ],
                             ))
                         : Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               ClipShadowPathWidget(
                                   shadow: const Shadow(blurRadius: 16),
@@ -104,10 +104,10 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
               if (isTablet)
                 Positioned(
                     top: isPotrait
-                        ? mediaQuerySize.height / 6
+                        ? mediaQuerySize.height / 7.5
                         : mediaQuerySize.height / 4.5,
                     bottom: isPotrait
-                        ? mediaQuerySize.height / 6
+                        ? mediaQuerySize.height / 7.5
                         : mediaQuerySize.height / 4.5,
                     left: isPotrait
                         ? mediaQuerySize.width / 6
@@ -116,8 +116,7 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                         ? mediaQuerySize.width / 6
                         : mediaQuerySize.width / 4.5,
                     child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 16, vertical: 2),
+                        padding: const EdgeInsets.symmetric(vertical: 2),
                         height: mediaQuerySize.height,
                         decoration: BoxDecoration(
                             color: Theme.of(context)
@@ -128,6 +127,7 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                 color: Theme.of(context).primaryColor)),
                         child: Center(
                           child: SingleChildScrollView(
+                            padding: const EdgeInsets.only(bottom: 100),
                             child: Column(
                               children: [
                                 ClipShadowPathWidget(
@@ -140,7 +140,7 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                 AppsPublicVariableResource.jarakheight16,
                                 Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 45),
+                                        horizontal: 35),
                                     child:
                                         appsFormLoginWidget(context, setState)),
                                 AppsPublicVariableResource.jarakheight24,
