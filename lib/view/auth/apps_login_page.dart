@@ -76,17 +76,9 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                               Container(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 16, vertical: 8),
-                                  height: mediaQuerySize.height / 2.1,
+                                  height: mediaQuerySize.height / 1.8,
                                   margin: const EdgeInsets.only(
                                       left: 32, right: 32, top: 24),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(
-                                        color: Theme.of(context).primaryColor),
-                                    color: Theme.of(context)
-                                        .scaffoldBackgroundColor
-                                        .withOpacity(0.90),
-                                  ),
                                   child: SingleChildScrollView(
                                       padding:
                                           const EdgeInsets.only(bottom: 100),

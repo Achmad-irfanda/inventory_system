@@ -11,10 +11,10 @@ Widget appsFormLoginWidget(
         alignment: Alignment.center,
         child: Column(children: [
           Text(
-            'Welcome to SiePOS',
+            'Recharge Inventory System',
             style: Theme.of(context)
                 .textTheme
-                .headlineSmall!
+                .titleLarge!
                 .copyWith(fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
