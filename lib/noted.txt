@@ -1,0 +1,31 @@
+// ukuran layar untuk hp nornal 
+width : 432,
+height: 816
+
+maksimum widthuntuk device vertical adalah 500, lebih dari 500 
+akan di split atau di pusatkan kontennya berada di tengah
+
+
+// noted umum
+0. kan landing page, nah pas landing page itu user diarahkan untuk register, nah pada saat proses regist itu, nanti user di suruh milih, dia mau regis untuk kasir jenis apa, nah kalo regis ke kasir jenis supermarket, ya nanti checking login providernya akan di arahkan ke page sesuai jenis kasir. 
+1. halaman kasir supermarket digunakan untuk aplikasi kasir yang hanya mengolah data transaksi dan melakukan pembayaran tanpa adanya management data menu yang memiliki bahan baku di dalamnya. 
+2. halaman kasir caffee digunakan unutk apliaksi kasir yang dapat emngolah data transaksi dan mengolah bahan baku pada masing masing menu 
+
+
+// noted user manual kasir supermarket
+- user terbagi menjadi 1, yaitu admin sekaligus kasir. kasir dapat menambahkan data barang yang di jual, dan melakukan transaksi secara langsung, tinggal tap aja untuk set barang penjualan
+- admin register akunnya
+
+
+// noted user manual kasir resto
+- admin registered user kasir 
+
+
+
+// jenis page kasir
+
+
+
+
+// bentuk penyimpanannya ada 2, yaitu local dan online
+local menggunakan sqflite, sedangkan onlie menggunakan mysql
