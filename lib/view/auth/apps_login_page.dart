@@ -28,12 +28,6 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
             children: [
               if (isMobile)
                 Positioned(
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    child: appsTailLoginWidget(context)),
-              if (isMobile)
-                Positioned(
                   right: !isPotrait ? mediaQuerySize.width / 4 : 0,
                   left: !isPotrait ? mediaQuerySize.width / 4 : 0,
                   top: !isPotrait ? 10 : 0,
@@ -59,7 +53,7 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                     shadow: const Shadow(blurRadius: 16),
                                     clipper: AppsCurveCliperWidget(),
                                     childProperty: Image.asset(
-                                        AppsImageResource.loginwidth,
+                                        AppsImageResource.login,
                                         fit: BoxFit.fitHeight,
                                         height: mediaQuerySize.width / 2.6)),
                                 Padding(
@@ -76,7 +70,7 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                   shadow: const Shadow(blurRadius: 16),
                                   clipper: AppsCurveCliperWidget(),
                                   childProperty: Image.asset(
-                                      AppsImageResource.loginwidth,
+                                      AppsImageResource.login,
                                       fit: BoxFit.fitHeight,
                                       height: mediaQuerySize.height / 2.6)),
                               Container(
@@ -142,7 +136,7 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                     shadow: const Shadow(blurRadius: 16),
                                     clipper: AppsCurveCliperWidget(),
                                     childProperty: Image.asset(
-                                        AppsImageResource.loginwidth,
+                                        AppsImageResource.login,
                                         fit: BoxFit.fitHeight,
                                         height: mediaQuerySize.width / 2.8)),
                                 AppsPublicVariableResource.jarakheight16,
@@ -151,9 +145,6 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                         horizontal: 45),
                                     child:
                                         appsFormLoginWidget(context, setState)),
-                                AppsPublicVariableResource.jarakheight32,
-                                AppsPublicVariableResource.jarakheight32,
-                                appsTailLoginWidget(context)
                               ],
                             ),
                           ),

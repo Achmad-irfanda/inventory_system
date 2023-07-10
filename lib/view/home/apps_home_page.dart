@@ -1,14 +1,14 @@
 // apps admin home page
 import 'package:inventory_system/apps_common_libs.dart';
 
-class AdminHome extends StatefulWidget {
-  const AdminHome({super.key});
+class AppsHomePage extends StatefulWidget {
+  const AppsHomePage({super.key});
 
   @override
-  State<AdminHome> createState() => _AdminHomeState();
+  State<AppsHomePage> createState() => _AppsHomePageState();
 }
 
-class _AdminHomeState extends State<AdminHome> {
+class _AppsHomePageState extends State<AppsHomePage> {
   @override
   Widget build(BuildContext context) {
     return AppsScaffold(

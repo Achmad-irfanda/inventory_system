@@ -1,7 +1,6 @@
 // apps formfield login widget
 
 import 'package:inventory_system/apps_common_libs.dart';
-import 'package:inventory_system/view/admin/home/apps_admin_home_page.dart';
 
 Widget appsFormLoginWidget(
   context,
@@ -83,7 +82,7 @@ Widget appsFormLoginWidget(
         backgroundColor: Theme.of(context).primaryColor,
         navigator: () {
           Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => const AdminHome()));
+              .push(MaterialPageRoute(builder: (context) => const AppsHomePage()));
           // loginUser();
         }),
     AppsPublicVariableResource.jarakheight24,
@@ -103,7 +102,7 @@ Widget appsFormLoginWidget(
     ),
     AppsPublicVariableResource.jarakheight8,
     AppsElevatedButton(
-        title: "Register Company",
+        title: "Register User",
         colorText: Theme.of(context).primaryColor,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         navigator: () {

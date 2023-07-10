@@ -23,11 +23,11 @@ export 'package:inventory_system/resource/apps_public_variable_resource.dart';
 export 'package:inventory_system/view/apps_splash_screen_page.dart';
 export 'package:inventory_system/view/auth/apps_login_page.dart';
 export 'package:inventory_system/view/auth/apps_register_page.dart';
+export 'package:inventory_system/view/home/apps_home_page.dart';
 
 export 'package:inventory_system/widget/auth/apps_clip_shadow_path_widget.dart';
 export 'package:inventory_system/widget/auth/apps_curve_cliper_widget.dart';
 export 'package:inventory_system/widget/auth/apps_form_login_widget.dart';
-export 'package:inventory_system/widget/auth/apps_tail_login_widget.dart';
 export 'package:inventory_system/widget/apps_appbar_widget.dart';
 export 'package:inventory_system/widget/apps_icon_widget.dart';
 export 'package:inventory_system/widget/apps_divider_widget.dart';
