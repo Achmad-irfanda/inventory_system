@@ -23,7 +23,7 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
         withLeading: true,
         withAction: false,
         withappbar: true,
-        titleAppbar: "Register Admin and Company",
+        titleAppbar: "Register Users",
         mainChildWidget: Form(
           key: keyFormRegister,
           child: Stack(
@@ -32,8 +32,8 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
                 Positioned(
                     left: isPotrait ? 24 : mediaQuerySize.width / 4.5,
                     right: isPotrait ? 24 : mediaQuerySize.width / 4.5,
-                    top: 24,
-                    bottom: 24,
+                    top:isPotrait? mediaQuerySize.height/7 :  24,
+                    bottom: isPotrait? mediaQuerySize.height/7  : 24,
                     child: Container(
                       height: mediaQuerySize.height,
                       padding: const EdgeInsets.symmetric(horizontal: 16),

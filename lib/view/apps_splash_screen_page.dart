@@ -18,9 +18,9 @@ class AppsSplasscreen extends StatelessWidget {
       logoWidth: 80,
       backgroundColor: scaffoldBackgroundColor,
       showLoader: false,
-      loadingText: Text('SiePOS | Empowering Your Business Transactions',
+      loadingText: Text('RIS | Recharge Inventory System',
           style:
-              bodysmall!.copyWith(fontSize: 12, fontWeight: FontWeight.w700)),
+              bodysmall!.copyWith(fontSize: 12, fontWeight: FontWeight.w800)),
       futureNavigator: futureCall(),
     );
   }

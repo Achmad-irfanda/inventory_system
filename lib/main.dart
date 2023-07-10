@@ -1,18 +1,8 @@
 import 'package:inventory_system/apps_common_libs.dart';
 
 void main() async {
-  // FIXME pada bgain device priview ini harus di hapus keitka mau release applikasinya
-
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp()
-
-      // DevicePreview(
-      // enabled: true,
-      // tools: const [
-      //   ...DevicePreview.defaultTools,
-      // ],
-      // builder: (context) => const MyApp())
-      );
+  );
 }
 
 class MyApp extends StatelessWidget {

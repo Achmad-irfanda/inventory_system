@@ -61,10 +61,12 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                         horizontal: 16),
                                     child:
                                         appsFormLoginWidget(context, setState)),
-                                AppsPublicVariableResource.jarakheight32,
+                                AppsPublicVariableResource.jarakheight24,
+                                tailTermandPrivacyPolicies(context),
                               ],
                             ))
                         : Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               ClipShadowPathWidget(
                                   shadow: const Shadow(blurRadius: 16),
@@ -73,23 +75,27 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                       AppsImageResource.login,
                                       fit: BoxFit.fitHeight,
                                       height: mediaQuerySize.height / 2.6)),
-                              Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 16, vertical: 8),
-                                  height: mediaQuerySize.height / 1.8,
-                                  margin: const EdgeInsets.only(
-                                      left: 32, right: 32, top: 24),
-                                  child: SingleChildScrollView(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 100),
-                                      child: Column(
-                                        children: [
-                                          appsFormLoginWidget(
-                                              context, setState),
-                                          AppsPublicVariableResource
-                                              .jarakheight32,
-                                        ],
-                                      ))),
+                              Flexible(
+                                flex: 1,
+                                child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 16, vertical: 8),
+                                    height: mediaQuerySize.height,
+                                    margin: const EdgeInsets.only(
+                                        left: 32, right: 32, top: 24),
+                                    child: SingleChildScrollView(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 100),
+                                        child: Column(
+                                          children: [
+                                            appsFormLoginWidget(
+                                                context, setState),
+                                            AppsPublicVariableResource
+                                                .jarakheight24,
+                                            tailTermandPrivacyPolicies(context),
+                                          ],
+                                        ))),
+                              ),
                             ],
                           ),
                   ),
@@ -137,6 +143,8 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                         horizontal: 45),
                                     child:
                                         appsFormLoginWidget(context, setState)),
+                                AppsPublicVariableResource.jarakheight24,
+                                tailTermandPrivacyPolicies(context),
                               ],
                             ),
                           ),
