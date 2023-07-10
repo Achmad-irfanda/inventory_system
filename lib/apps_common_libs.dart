@@ -24,6 +24,10 @@ export 'package:inventory_system/view/apps_splash_screen_page.dart';
 export 'package:inventory_system/view/auth/apps_login_page.dart';
 export 'package:inventory_system/view/auth/apps_register_page.dart';
 export 'package:inventory_system/view/home/apps_home_page.dart';
+export 'package:inventory_system/view/iteminside/apps_item_inside_page.dart';
+export 'package:inventory_system/view/itemoutside/apps_item_outside_page.dart';
+export 'package:inventory_system/view/profile/apps_profile_user_page.dart';
+export 'package:inventory_system/view/report/apps_report_page.dart';
 
 export 'package:inventory_system/widget/auth/apps_clip_shadow_path_widget.dart';
 export 'package:inventory_system/widget/auth/apps_curve_cliper_widget.dart';

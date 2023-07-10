@@ -22,15 +22,16 @@ class _AppsBottomNavbarWidgetState extends State<AppsBottomNavbarWidget> {
   Widget build(BuildContext context) {
     final List<Widget> page = <Widget>[
       const AppsHomePage(),
-      const AppsLeadPage(),
-      const AppsCommisionPage(),
-      const AppsProfilePage(),
+      const AppsItemInsidePage(),
+      const AppsItemOutsidePage(), 
+      const AppsReportPage(),
+      const AppProfileUserPage()
     ];
 
     return Scaffold(
       body: page.elementAt(indexs),
       bottomNavigationBar: Container(
-        color: white,
+        color: Colors.white,
         height: MediaQuery.of(context).size.height / 10,
         child: ClipRRect(
           borderRadius: const BorderRadius.only(
@@ -39,50 +40,44 @@ class _AppsBottomNavbarWidgetState extends State<AppsBottomNavbarWidget> {
           ),
           child: BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
-              backgroundColor: darkPurple,
+              backgroundColor: Theme.of(context).primaryColor, 
               selectedFontSize: 12,
               selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w400),
               currentIndex: indexs,
-              selectedItemColor: white,
-              unselectedItemColor: grey1,
+              selectedItemColor: Colors.white,
+              unselectedItemColor: Colors.grey.shade400,
               iconSize: 24.0,
               onTap: onItemTap,
               items: <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    AssetImage((indexs == 0)
-                        ? AppsIconResource.homact
-                        : AppsIconResource.hompas),
-                    size: 24,
-                  ),
+                  icon: (indexs == 0)
+                        ? const Icon(Icons.home)
+                        : const Icon(Icons.home_outlined),
                   label: 'Home',
                 ),
                 BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    AssetImage((indexs == 1)
-                        ? AppsIconResource.projact
-                        : AppsIconResource.projpas),
-                    size: 24,
-                  ),
-                  label: 'Lead',
+                  icon: (indexs == 1)
+                      ? const Icon(Icons.zoom_in_map_rounded)
+                      : const Icon(Icons.zoom_in_map_rounded),
+                  label: 'Inside',
                 ),
                 BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    AssetImage((indexs == 2)
-                        ? AppsIconResource.payact
-                        : AppsIconResource.paypas),
-                    size: 24,
-                  ),
-                  label: 'Commision',
+                  icon: (indexs == 2)
+                      ? const Icon(Icons.zoom_out_map_rounded)
+                      : const Icon(Icons.zoom_out_map_rounded),
+                  label: 'Outside',
                 ),
                 BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    AssetImage((indexs == 3)
-                        ? AppsIconResource.profact
-                        : AppsIconResource.profpas),
-                    size: 24,
-                  ),
-                  label: 'Home',
+                  icon: (indexs == 3)
+                      ? const Icon(Icons.document_scanner)
+                      : const Icon(Icons.document_scanner_outlined),
+                  label: 'Report',
+                ),
+                BottomNavigationBarItem(
+                  icon: (indexs == 4)
+                      ? const Icon(Icons.person_2)
+                      : const Icon(Icons.person_2_outlined),
+                  label: 'Profile',
                 ),
               ]),
         ),
