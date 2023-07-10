@@ -10,7 +10,7 @@ class AppsStylesResource {
         appBarTheme: AppBarTheme(
           backgroundColor: isDarkTheme
               ? const Color.fromRGBO(31, 31, 31, 12)
-              : const Color(0xffA0501D),
+              : const Color(0xffff735c),
           titleTextStyle: Theme.of(context)
               .textTheme
               .titleMedium!
@@ -22,7 +22,7 @@ class AppsStylesResource {
         cardColor: isDarkTheme
             ? const Color.fromRGBO(30, 30, 30, 12)
             : Colors.grey.shade200,
-        primaryColor: isDarkTheme ? brownshade50 : const Color(0xffA0501D),
+        primaryColor: isDarkTheme ? brownshade50 : const Color(0xffff735c),
         textTheme: TextTheme(
           displayLarge: GoogleFonts.poppins(
               color: isDarkTheme ? brownshade50 : Colors.black,
