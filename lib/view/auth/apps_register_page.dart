@@ -50,9 +50,6 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
                             EdgeInsets.only(bottom: mediaQuerySize.height / 2),
                         child: Column(
                           children: [
-                            appsUpdateImageProfileWidget(
-                                context, setState, PagePosition.register),
-                            AppsPublicVariableResource.jarakheight24,
                             appsFormRegisterWidget(context, setState),
                             AppsPublicVariableResource.jarakheight24,
                             tailTermandPrivacyPolicies(context),
@@ -90,9 +87,6 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
                             EdgeInsets.only(bottom: mediaQuerySize.height / 2),
                         child: Column(
                           children: [
-                            appsUpdateImageProfileWidget(
-                                context, setState, PagePosition.register),
-                            AppsPublicVariableResource.jarakheight24,
                             appsFormRegisterWidget(context, setState),
                             AppsPublicVariableResource.jarakheight24,
                             tailTermandPrivacyPolicies(context),

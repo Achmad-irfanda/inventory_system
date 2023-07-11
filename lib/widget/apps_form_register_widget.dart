@@ -59,7 +59,7 @@ Widget appsFormRegisterWidget(
     AppsElevatedButton(
         title: "Register",
         navigator: () {
-          registerUser();
+          
         },
         colorText: Theme.of(context).scaffoldBackgroundColor,
         backgroundColor: Theme.of(context).primaryColor)
