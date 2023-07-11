@@ -10,6 +10,7 @@ export 'package:currency_text_input_formatter/currency_text_input_formatter.dart
 export 'package:search_choices/search_choices.dart';
 export 'package:image_picker/image_picker.dart';
 export 'package:firebase_auth/firebase_auth.dart';
+export 'package:firebase_core/firebase_core.dart';
 
 export 'package:inventory_system/provider/apps_theme_provider.dart';
 export 'package:inventory_system/provider/apps_auth_provider.dart';
@@ -43,6 +44,7 @@ export 'package:inventory_system/widget/button/apps_elevated_button_widget.dart'
 export 'package:inventory_system/widget/apps_textfield_widget.dart';
 export 'package:inventory_system/widget/apps_form_register_widget.dart';
 export 'package:inventory_system/widget/button/apps_text_button_widget.dart';
+export 'package:inventory_system/widget/apps_floatingaction_button_widget.dart';
 
 export 'package:inventory_system/function/auth/apps_auth_result.dart';
 export 'package:inventory_system/model/apps_user_model.dart';

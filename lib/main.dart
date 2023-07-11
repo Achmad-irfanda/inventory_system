@@ -1,6 +1,9 @@
+
 import 'package:inventory_system/apps_common_libs.dart';
 
 void main() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp();
   runApp(const MyApp()
   );
 }

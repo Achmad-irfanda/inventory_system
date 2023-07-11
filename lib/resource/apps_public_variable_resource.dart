@@ -34,6 +34,7 @@ class AppsPublicVariableResource {
   );
 
   static GlobalKey<FormState> formkey = GlobalKey<FormState>();
+  static GlobalKey<FormState> formkeys = GlobalKey<FormState>(); 
 
   // user variable
   static int idUser = 0;
