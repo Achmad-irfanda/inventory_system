@@ -1,6 +1,7 @@
 // apps formfield register widget
 
 import 'package:inventory_system/apps_common_libs.dart';
+import 'package:inventory_system/function/auth/apps_auth_service.dart';
 
 Widget appsFormRegisterWidget(
   context,
@@ -58,9 +59,35 @@ Widget appsFormRegisterWidget(
     AppsPublicVariableResource.jarakheight24,
     AppsElevatedButton(
         title: "Register",
-        navigator: () {
-          
-        },
+        navigator: () async {
+          UserModel result = await AuthService.registerUser(
+                             email: AppsPublicVariableResource.email, password: AppsPublicVariableResource.password);
+                   if (result.user != null) {
+                     // Go to Profile Page
+                     Navigator.push(
+                         context,
+                         MaterialPageRoute(
+                            builder: (context) => const AppsHomePage()));
+                  } else {
+                    // Show Dialog
+                    showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: const Text('Error'),
+                          content: Text(result.message),
+                          actions: <Widget>[
+                            TextButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: const Text('Ok'),
+                            )
+                          ],
+                        ));
+                  }
+                },
+              
+        
         colorText: Theme.of(context).scaffoldBackgroundColor,
         backgroundColor: Theme.of(context).primaryColor)
   ]);

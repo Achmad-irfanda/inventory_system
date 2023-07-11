@@ -65,7 +65,7 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
                     bottom: isPotrait
                         ? mediaQuerySize.height / 8.9
                         : mediaQuerySize.height / 4.5,
-                    left: isPotrait
+                  left: isPotrait
                         ? mediaQuerySize.width / 6
                         : mediaQuerySize.width / 4.5,
                     right: isPotrait
