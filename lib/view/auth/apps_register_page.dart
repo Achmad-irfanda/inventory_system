@@ -17,7 +17,6 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
         MediaQuery.of(context).orientation == Orientation.portrait;
     final isMobile = mediaQuerySize.shortestSide < 600;
     final isTablet = mediaQuerySize.shortestSide > 600;
-    final GlobalKey<FormState> keyFormRegister = GlobalKey<FormState>();
     return AppsScaffold(
         withfloating: false,
         withLeading: true,
@@ -25,7 +24,7 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
         withappbar: true,
         titleAppbar: "Register Users",
         mainChildWidget: Form(
-          key: keyFormRegister,
+          key: AppsPublicVariableResource.formkey, 
           child: Stack(
             children: [
               if (isMobile)
@@ -50,7 +49,7 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
                             EdgeInsets.only(bottom: mediaQuerySize.height / 2),
                         child: Column(
                           children: [
-                            appsFormRegisterWidget(context, setState),
+                            const AppsRegisterForm(), 
                             AppsPublicVariableResource.jarakheight24,
                             tailTermandPrivacyPolicies(context),
                           ],
@@ -87,7 +86,7 @@ class _AppsRegisterPageState extends State<AppsRegisterPage> {
                             EdgeInsets.only(bottom: mediaQuerySize.height / 2),
                         child: Column(
                           children: [
-                            appsFormRegisterWidget(context, setState),
+                            const AppsRegisterForm(),
                             AppsPublicVariableResource.jarakheight24,
                             tailTermandPrivacyPolicies(context),
                           ],

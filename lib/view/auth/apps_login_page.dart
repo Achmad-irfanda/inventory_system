@@ -17,13 +17,16 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
         MediaQuery.of(context).orientation == Orientation.portrait;
     final isMobile = mediaQuerySize.shortestSide < 600;
     final isTablet = mediaQuerySize.shortestSide > 600;
-    return AppsScaffold(
+    return 
+    
+    
+    AppsScaffold(
         withfloating: false,
         withappbar: false,
         withLeading: false,
         withAction: false,
         mainChildWidget: Form(
-          key: AppsPublicVariableResource.keyLogin,
+          key: AppsPublicVariableResource.formkey,
           child: Stack(
             children: [
               if (isMobile)
@@ -56,11 +59,10 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                         AppsImageResource.login,
                                         fit: BoxFit.fitHeight,
                                         height: mediaQuerySize.width / 2.6)),
-                                Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 16),
-                                    child:
-                                        appsFormLoginWidget(context, setState)),
+                                const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 16),
+                                    child: AppsFormLogin()),
                                 AppsPublicVariableResource.jarakheight24,
                                 tailTermandPrivacyPolicies(context),
                               ],
@@ -88,8 +90,7 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                             const EdgeInsets.only(bottom: 100),
                                         child: Column(
                                           children: [
-                                            appsFormLoginWidget(
-                                                context, setState),
+                                            const AppsFormLogin(),
                                             AppsPublicVariableResource
                                                 .jarakheight24,
                                             tailTermandPrivacyPolicies(context),
@@ -138,11 +139,10 @@ class _AppsLoginPageState extends State<AppsLoginPage> {
                                         fit: BoxFit.fitHeight,
                                         height: mediaQuerySize.width / 2.8)),
                                 AppsPublicVariableResource.jarakheight16,
-                                Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 35),
-                                    child:
-                                        appsFormLoginWidget(context, setState)),
+                                const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 35),
+                                    child: AppsFormLogin()),
                                 AppsPublicVariableResource.jarakheight24,
                                 tailTermandPrivacyPolicies(context),
                               ],

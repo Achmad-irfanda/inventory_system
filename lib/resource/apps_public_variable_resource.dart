@@ -33,10 +33,7 @@ class AppsPublicVariableResource {
     width: 32,
   );
 
-  //keylogin
-  static GlobalKey<FormState> keyLogin = GlobalKey<FormState>();
-  //keyregist
-  static GlobalKey<FormState> keyRegist = GlobalKey<FormState>();
+  static GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
   // user variable
   static int idUser = 0;
@@ -55,6 +52,4 @@ class AppsPublicVariableResource {
 
   //obscure textvalue passowrd
   static bool obscureText = true;
-
-
 }

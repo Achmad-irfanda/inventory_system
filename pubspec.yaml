@@ -33,7 +33,6 @@ dependencies:
   easy_splash_screen: ^1.0.4
   firebase_auth: ^4.6.3
   firebase_core: ^2.14.0
-  firebase_user_stream: ^1.1.0
   flutter:
     sdk: flutter
   google_fonts: ^5.1.0
