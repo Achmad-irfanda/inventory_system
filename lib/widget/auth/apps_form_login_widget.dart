@@ -26,12 +26,11 @@ Widget appsFormLoginWidget(
         ])),
     AppsPublicVariableResource.jarakheight32,
     AppsTextFieldWidget(
-        keyField: AppsPublicVariableResource.keyUsername,
-        controller: AppsPublicVariableResource.usernameController,
+        controller: AppsPublicVariableResource.emailController,
         jenisField: JenisField.universal,
-        label: "Username",
-        hintText: "username",
-        namaField: "Username",
+        label: "Email",
+        hintText: "email",
+        namaField: "Email",
         maxLines: 1,
         keyboardType: TextInputType.text,
         suffixIcon: Icon(
@@ -41,11 +40,10 @@ Widget appsFormLoginWidget(
         withValidaor: true,
         onChanged: (value) {},
         onsaved: (value) {
-          AppsPublicVariableResource.username = value;
+          AppsPublicVariableResource.email = value;
         }),
     AppsPublicVariableResource.jarakheight24,
     AppsTextFieldWidget(
-        keyField: AppsPublicVariableResource.keyPassword,
         controller: AppsPublicVariableResource.passwordController,
         jenisField: JenisField.password,
         label: "Password",
@@ -81,8 +79,8 @@ Widget appsFormLoginWidget(
         colorText: Theme.of(context).scaffoldBackgroundColor,
         backgroundColor: Theme.of(context).primaryColor,
         navigator: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => const AppsHomePage()));
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const AppsHomePage()));
           // loginUser();
         }),
     AppsPublicVariableResource.jarakheight24,

@@ -7,12 +7,12 @@ import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 enum JenisField {
   universal,
   currency,
+  email, 
   password,
   phone,
 }
 
 class AppsTextFieldWidget extends StatefulWidget {
-  final dynamic keyField;
   final TextEditingController controller;
   final JenisField jenisField;
   final String label;
@@ -34,7 +34,6 @@ class AppsTextFieldWidget extends StatefulWidget {
 
   const AppsTextFieldWidget({
     super.key,
-    this.keyField,
     required this.controller,
     required this.jenisField,
     required this.label,
@@ -67,7 +66,6 @@ class _AppsTextFieldWidgetState extends State<AppsTextFieldWidget> {
     var maskFormatter = MaskTextInputFormatter(
         mask: '####-####-####', filter: {"#": RegExp(r'[0-9]')});
     return TextFormField(
-      key: widget.keyField,
       controller: widget.controller,
       style: bodymedium,
       enabled: true,
@@ -125,6 +123,9 @@ class _AppsTextFieldWidgetState extends State<AppsTextFieldWidget> {
         if (value == null || value.isEmpty && widget.withValidaor == true) {
           return "Field ${widget.namaField} tidak boleh kosong";
         }
+        if (widget.jenisField == JenisField.email && !value.contains("@") || widget.jenisField == JenisField.email && !value.contains(".")){
+            return "Field ${widget.namaField} fail formmatter";
+          }
         return null;
       },
     );

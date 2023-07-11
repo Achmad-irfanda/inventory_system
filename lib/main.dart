@@ -53,14 +53,8 @@ class _AppsWrapperState extends State<AppsWrapper> {
     var userProv = Provider.of<AppsAuthNotifier>(context).appsauthdataprovider;
     setState(() {
       AppsPublicVariableResource.idUser = userProv.idUser;
-      AppsPublicVariableResource.tipeUser = userProv.tipeUser;
-      AppsPublicVariableResource.tipeMesinKasir = userProv.tipeMesinKasir;
-      AppsPublicVariableResource.username = userProv.username;
+      AppsPublicVariableResource.email = userProv.email;
       AppsPublicVariableResource.password = userProv.password;
-      AppsPublicVariableResource.token = userProv.token;
-      AppsPublicVariableResource.companyName = userProv.companyName;
-      AppsPublicVariableResource.companyAddress = userProv.companyAddress;
-      AppsPublicVariableResource.companyPhone = userProv.companyPhone;
     });
     if (userProv.isLogin) {
       return const AppsSplasscreen();

@@ -8,12 +8,11 @@ Widget appsFormRegisterWidget(
 ) {
   return Column(children: [
     AppsTextFieldWidget(
-        keyField: AppsPublicVariableResource.keyUserReg,
-        controller: AppsPublicVariableResource.usernameController,
+        controller: AppsPublicVariableResource.emailController,
         jenisField: JenisField.universal,
-        label: "Username",
-        hintText: "username",
-        namaField: "Username",
+        label: "Email",
+        hintText: "email",
+        namaField: "Email",
         maxLines: 1,
         keyboardType: TextInputType.text,
         suffixIcon: Icon(
@@ -23,11 +22,10 @@ Widget appsFormRegisterWidget(
         withValidaor: true,
         onChanged: (value) {},
         onsaved: (value) {
-          AppsPublicVariableResource.username = value;
+          AppsPublicVariableResource.email = value;
         }),
     AppsPublicVariableResource.jarakheight24,
     AppsTextFieldWidget(
-        keyField: AppsPublicVariableResource.keyPassReg,
         controller: AppsPublicVariableResource.passwordController,
         jenisField: JenisField.password,
         label: "Password",

@@ -35,15 +35,8 @@ class AppsPublicVariableResource {
 
   //keylogin
   static GlobalKey<FormState> keyLogin = GlobalKey<FormState>();
-  static Key keyUsername = GlobalKey();
-  static Key keyPassword = GlobalKey();
   //keyregist
   static GlobalKey<FormState> keyRegist = GlobalKey<FormState>();
-  static Key keyUserReg = GlobalKey();
-  static Key keyPassReg = GlobalKey();
-  static Key keyCompName = GlobalKey();
-  static Key keyCompAdd = GlobalKey();
-  static Key keyCompPhone = GlobalKey();
 
   // user variable
   static int idUser = 0;
@@ -53,29 +46,15 @@ class AppsPublicVariableResource {
   static String imageString = "";
   static File? imageFile;
   //
-  static String username = "";
+  static String email = "";
   static String password = "";
-  static String token = "";
-  static String companyName = "";
-  static String companyAddress = "";
-  static String companyPhone = "";
 
   //controller data user for auth, register, and update data
-  static TextEditingController usernameController = TextEditingController();
+  static TextEditingController emailController = TextEditingController();
   static TextEditingController passwordController = TextEditingController();
-  static TextEditingController compNameController = TextEditingController();
-  static TextEditingController compAddressController = TextEditingController();
-  static TextEditingController comPhoneController = TextEditingController();
 
   //obscure textvalue passowrd
   static bool obscureText = true;
 
-  // crud dog with sqf lite
-  static GlobalKey<FormState> formKeyDog = GlobalKey<FormState>();
 
-  static String namedog = "";
-  static int agedog = 0;
-
-  static TextEditingController namedogController = TextEditingController();
-  static TextEditingController agedogController = TextEditingController();
 }
