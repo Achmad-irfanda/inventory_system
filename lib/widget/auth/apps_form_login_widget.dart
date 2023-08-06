@@ -10,6 +10,7 @@ class AppsFormLogin extends StatefulWidget {
 }
 
 class _AppsFormLoginState extends State<AppsFormLogin> {
+  
   @override
   Widget build(BuildContext context) {
   return Column(children: [
@@ -56,6 +57,7 @@ class _AppsFormLoginState extends State<AppsFormLogin> {
           hintText: "user password",
           namaField: "Password",
           maxLines: 1,
+          
           keyboardType: TextInputType.text,
           suffixIcon: IconButton(
             icon: (AppsPublicVariableResource.obscureText)

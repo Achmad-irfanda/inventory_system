@@ -24,7 +24,7 @@ class AppsTextFieldWidget extends StatefulWidget {
   final dynamic prefixIcon;
   final dynamic prefixText;
 
-  final dynamic suffixIcon;
+  final dynamic suffixIcon; 
   final dynamic suffixText;
   final dynamic suffixTextStyle;
   //

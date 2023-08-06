@@ -1,16 +1,27 @@
+// ignore_for_file: deprecated_member_use
 
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:inventory_system/api/notification_api.dart';
 import 'package:inventory_system/apps_common_libs.dart';
 
+final navigatorKey = GlobalKey<NavigatorState>();
+
 void main() async {
-    WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp();
-  runApp(const MyApp()
-  );
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await NotificationApi().initNotification();
+  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    print('Got a message whilst in the foreground!');
+    if (message.notification != null) {
+      print('Notification Title: ${message.notification?.title}');
+      print('Notification Body: ${message.notification?.body}');
+    }
+  });
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -30,12 +41,16 @@ class MyApp extends StatelessWidget {
               }
             },
             child: MaterialApp(
-                useInheritedMediaQuery: true,
-                theme: provider.darkmode
-                    ? AppsStylesResource.themeData(true, context)
-                    : AppsStylesResource.themeData(false, context),
-                debugShowCheckedModeBanner: false,
-                home: const AppsSplasscreen()),
+              useInheritedMediaQuery: true,
+              theme: provider.darkmode
+                  ? AppsStylesResource.themeData(true, context)
+                  : AppsStylesResource.themeData(false, context),
+              debugShowCheckedModeBanner: false,
+              home: const AppsSplasscreen(),
+              routes: {
+                AppsHomePage.route: (context) => const AppsHomePage(),
+              },
+            ),
           );
         },
       ),

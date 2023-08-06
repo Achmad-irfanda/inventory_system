@@ -46,6 +46,7 @@ class AppsPublicVariableResource {
   //
   static String email = "";
   static String password = "";
+  static int qty = 1;
 
   //controller data user for auth, register, and update data
   static TextEditingController emailController = TextEditingController();

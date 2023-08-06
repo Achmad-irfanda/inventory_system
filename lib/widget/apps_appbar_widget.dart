@@ -31,6 +31,7 @@ class _AppsAppbarWidgetState extends State<AppsAppbarWidget> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      elevation: 0,
       leading: (widget.withLeading == false)
           ? null
           : AppsIconWidget(
